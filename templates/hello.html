@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block content %}
+	<h1>Welcome! You are now logged in as {{ username }}</h1>
+	<br />
+	{% if time %}
+                <p class="alert alert-success" role="alert">Last time when u were logged in: {{ time }}</p>
+    {% endif %}
+    <button class="btn btn-primary" type="button"> Messages
+    	{% if unread_count >-1 %}
+    	    <span class="badge" id=unread_count> {{ unread_count }} </span>	
+    	{% endif %}
+    </button>	
+    <div class="btn-group" role="group" aria-label="...">
+     	<button type="button" class="btn btn-default" id=inbox> Mail </button>
+     	<button type="button" class="btn btn-default" id=sent> Send </button>
+     	<button type="button" class="btn btn-default" id=new_message> New messages </button>
+     	<button type="button" class="btn btn-default" id=logout> Logout </button>
+     </div>	
+     {% if message %}
+		<p class="alert alert-success" role="alert">Message: {{ message }}</p>
+     {% endif %
+     <p><a id=selected></a></p>
+     <p><div id=workspace></div></p>
+{% endblock %}

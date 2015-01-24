@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+{% block content %}
+	<h1>Login</h1>
+	{% if error %}
+		<p class="alert alert-danger" role="alert">Error: {{ error }}</p>
+	{% endif %}
+
+	<form action ="log" class="form-horizontal" enctype="multipart/form-data" role="form" method="post">
+  		<div class="form-group">
+    			<label for="inputLogin3" class="col-sm-2 control-label">Login</label>
+    			<div class="col-sm-10">
+      				<input type="text" name="username" class="form-control" id="inputLogin3" placeholder="Login">
+    			</div>
+  		</div>
+  		<div class="form-group">
+    			<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    			<div class="col-sm-10">
+      				<input type="password" name ="password" class="form-control" id="inputPassword3" placeholder="Password">
+    			</div>
+  		</div>
+  		<div class="form-group">
+    			<div class="col-sm-offset-2 col-sm-10">
+      				<button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+    			</div>
+  		</div>
+	</form>
+	{% if message %}
+		<p class="alert alert-success" role="alert">Message: {{ message }}</p>
+	{% endif %}
+{% endblock %}

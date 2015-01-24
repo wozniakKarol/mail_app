@@ -1,0 +1,18 @@
+.form-control {
+	margin-bottom: 10%;
+	width: 50%;
+}
+
+.jumbotron p {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.jumbotron h1 {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.btn btn-success btn-lg active{ margin: 0 auto; width: 180px; }
+
+h1 { margin: 0 auto; text-align: center; }

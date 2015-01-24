@@ -1,0 +1,28 @@
+{% extends "bootstrap/base.html" %}
+{% block head %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/~wozniak2/mail_app/templates/script.js"></script>
+    <script type="text/javascript"> var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }} + '/~wozniak2/apps/mail_app';</script>
+{% endblock %}
+{% block title %}My Flask App{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+    	<div class="navbar-header">
+        	<a class="navbar-brand" href="/~wozniak2/apps/mail_app/">My App</a>
+        	
+    	</div>
+    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      		<ul class="nav navbar-nav">
+      			<li class="active"><a href="/~wozniak2/apps/mail_app/"><span class="glyphicon glyphicon-home" aria-hiden="true"></span> Home <span class="sr-only"></span></a></li>
+            	<li><a href="welcome"><span class="glyphicon glyphicon-glass" aria-hiden="true"></span> Welcome</a></li>
+            	<li><a href="log"><span class="glyphicon glyphicon-user" aria-hiden="true"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>    
+</div>
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}
